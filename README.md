@@ -11,7 +11,7 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages).
 -->
 
-TODO: Hey coders this is currency converter
+Hey coders this is currency converter
 
 ## Features
 
@@ -24,11 +24,20 @@ start using the package.
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
+`Easy Price` is a simple package that can be used to show price in human readable
+
+```dart
+EasyPrice(
+    price: 1750000,
+    currencyType: 'inr',
+    precision: 1,
+
+)
+```
 
 ## Installation
 
 ```yaml
 dependencies:
-currency_converter: ^0.0.1;
+easy_price: ^0.0.1;
 ```

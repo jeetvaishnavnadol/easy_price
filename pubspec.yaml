@@ -1,7 +1,7 @@
 name: easy_price
-description: "A new Flutter package project."
-version: 0.0.1
-homepage: https://github.com/jeetvaishnavnadol/easy-price.git
+description: "Easy price will easier your price showing things"
+version: 0.0.2
+homepage: https://github.com/jeetvaishnavnadol/easy_price.git
 
 environment:
   sdk: ">=3.3.2 <4.0.0"
