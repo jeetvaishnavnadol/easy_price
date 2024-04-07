@@ -43,11 +43,11 @@ class _EasyPriceState extends State<EasyPrice> {
     if (priceLength >= 6 && priceLength < 8) {
       double priceInLacs = price / 100000;
       String formattedPrice = priceInLacs.toStringAsFixed(widget.precision);
-      return '$currentSymbol $formattedPrice Lacs';
+      return '$currentSymbol $formattedPrice ${currencyType.toLowerCase() == 'inr' ? 'Lacs' : 'Thousand'}';
     } else if (priceLength >= 8) {
       double priceInLacs = price / 100000;
       String formattedPrice = priceInLacs.toStringAsFixed(widget.precision);
-      return '$currentSymbol $formattedPrice Crores';
+      return '$currentSymbol $formattedPrice ${currencyType.toLowerCase() == 'inr' ? 'Crores' : 'Million'}';
     } else {
       return priceAsString;
     }
