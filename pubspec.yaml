@@ -1,7 +1,7 @@
 name: easy_price
 description: "A new Flutter package project."
 version: 0.0.1
-homepage: https://github.com/jitendravn/currencyConverter.git
+homepage: https://github.com/jeetvaishnavnadol/easy-price.git
 
 environment:
   sdk: ">=3.3.2 <4.0.0"
