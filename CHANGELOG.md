@@ -10,6 +10,6 @@ Readme md file changed
 
 Currency Terminology added
 
-## 0.0.3
+## 0.0.4
 
-Currency styling added
+Currency styling added and image added

@@ -44,5 +44,5 @@ easy_price: ^0.0.1;
 
 ##Example
 
-![Currency](image.jpg)
+![Currency](https://github.com/jeetvaishnavnadol/easy_price/blob/main/images/currency.png)
 `
