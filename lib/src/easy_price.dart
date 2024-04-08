@@ -4,13 +4,16 @@ class EasyPrice extends StatefulWidget {
   final int price;
   final String currencyType;
   final TextStyle textStyle;
+  final TextStyle currencyStyle;
   final int precision;
+
   const EasyPrice(
       {super.key,
       required this.price,
       this.currencyType = 'usd',
       this.textStyle = const TextStyle(),
-      this.precision = 2});
+      this.precision = 2,
+      this.currencyStyle = const TextStyle()});
 
   @override
   State<EasyPrice> createState() => _EasyPriceState();
@@ -27,46 +30,54 @@ class _EasyPriceState extends State<EasyPrice> {
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-      price.toString(),
-      style: widget.textStyle,
+    return Row(
+      children: [
+        Text(
+          _currencySymbol(
+            currencyType: widget.currencyType,
+          ),
+          style: widget.currencyStyle,
+        ),
+        Text(
+          price.toString(),
+          style: widget.textStyle,
+        ),
+      ],
     );
   }
 
   _sortPricing({required int price, String currencyType = 'usd'}) {
     String priceAsString = price.toString();
 
-    String currentSymbol = _currencySymbol(currencyType: currencyType);
-
     int priceLength = priceAsString.length;
 
     if (priceLength >= 6 && priceLength < 8) {
       double priceInLacs = price / 100000;
       String formattedPrice = priceInLacs.toStringAsFixed(widget.precision);
-      return '$currentSymbol $formattedPrice ${currencyType.toLowerCase() == 'inr' ? 'Lacs' : 'Thousand'}';
+      return ' $formattedPrice ${currencyType.toLowerCase() == 'inr' ? 'Lacs' : 'Thousand'}';
     } else if (priceLength >= 8) {
       double priceInLacs = price / 100000;
       String formattedPrice = priceInLacs.toStringAsFixed(widget.precision);
-      return '$currentSymbol $formattedPrice ${currencyType.toLowerCase() == 'inr' ? 'Crores' : 'Million'}';
+      return ' $formattedPrice ${currencyType.toLowerCase() == 'inr' ? 'Crores' : 'Million'}';
     } else {
       return priceAsString;
     }
   }
 
   _currencySymbol({String currencyType = ''}) {
-    String currentSymbol = '';
+    String currencySymbol = '';
     switch (currencyType.toLowerCase()) {
       case 'inr':
-        currentSymbol = '₹';
+        currencySymbol = '₹';
       case 'eur':
-        currentSymbol = '€';
+        currencySymbol = '€';
         break;
       case 'usd':
-        currentSymbol = "\$";
+        currencySymbol = "\$";
         break;
       default:
-        currentSymbol = "\$";
+        currencySymbol = "\$";
     }
-    return currentSymbol;
+    return currencySymbol;
   }
 }

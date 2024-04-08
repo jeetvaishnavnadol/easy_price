@@ -41,3 +41,8 @@ EasyPrice(
 dependencies:
 easy_price: ^0.0.1;
 ```
+
+##Example
+
+![Currency](image.jpg)
+`

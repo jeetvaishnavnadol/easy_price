@@ -9,3 +9,7 @@ Readme md file changed
 ## 0.0.3
 
 Currency Terminology added
+
+## 0.0.3
+
+Currency styling added
