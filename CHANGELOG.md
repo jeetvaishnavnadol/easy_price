@@ -13,3 +13,7 @@ Currency Terminology added
 ## 0.0.4
 
 Currency styling added and image added
+
+## 0.0.5
+
+Container alignment added

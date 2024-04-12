@@ -39,10 +39,9 @@ EasyPrice(
 
 ```yaml
 dependencies:
-easy_price: ^0.0.1;
+easy_price: ^0.0.5;
 ```
 
 ##Example
 
 ![Currency](https://github.com/jeetvaishnavnadol/easy_price/blob/main/images/currency.png)
-`
