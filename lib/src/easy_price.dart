@@ -32,6 +32,7 @@ class _EasyPriceState extends State<EasyPrice> {
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: widget.alignment,
       children: [
         Text(
           _currencySymbol(

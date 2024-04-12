@@ -21,3 +21,7 @@ Container alignment added
 ## 0.0.6
 
 Row main axis alignment added
+
+## 0.0.7
+
+Row main axis alignment issue
