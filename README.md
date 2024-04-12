@@ -35,6 +35,18 @@ EasyPrice(
 )
 ```
 
+## for additional styling of currency symbol & Easy Price
+
+```dart
+EasyPrice(
+    price: 1750000,
+    currencyType: 'inr',
+    precision: 1,
+    currencyStyle:TextStyle(color:Colors.red),
+    textStyle:TextStyle(color:Colors.blue),
+)
+```
+
 ## Installation
 
 ```yaml

@@ -17,3 +17,7 @@ Currency styling added and image added
 ## 0.0.5
 
 Container alignment added
+
+## 0.0.6
+
+Row main axis alignment added

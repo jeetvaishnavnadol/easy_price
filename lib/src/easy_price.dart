@@ -6,7 +6,7 @@ class EasyPrice extends StatefulWidget {
   final TextStyle textStyle;
   final TextStyle currencyStyle;
   final int precision;
-  final Alignment alignment;
+  final MainAxisAlignment alignment;
   const EasyPrice(
       {super.key,
       required this.price,
@@ -14,7 +14,7 @@ class EasyPrice extends StatefulWidget {
       this.textStyle = const TextStyle(),
       this.precision = 2,
       this.currencyStyle = const TextStyle(),
-      this.alignment = Alignment.center});
+      this.alignment = MainAxisAlignment.center});
 
   @override
   State<EasyPrice> createState() => _EasyPriceState();
@@ -31,22 +31,19 @@ class _EasyPriceState extends State<EasyPrice> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      alignment: widget.alignment,
-      child: Row(
-        children: [
-          Text(
-            _currencySymbol(
-              currencyType: widget.currencyType,
-            ),
-            style: widget.currencyStyle,
+    return Row(
+      children: [
+        Text(
+          _currencySymbol(
+            currencyType: widget.currencyType,
           ),
-          Text(
-            price.toString(),
-            style: widget.textStyle,
-          ),
-        ],
-      ),
+          style: widget.currencyStyle,
+        ),
+        Text(
+          price.toString(),
+          style: widget.textStyle,
+        ),
+      ],
     );
   }
 
