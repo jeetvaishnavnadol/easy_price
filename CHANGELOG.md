@@ -25,3 +25,7 @@ Row main axis alignment added
 ## 0.0.7
 
 Row main axis alignment issue
+
+## 0.0.8
+
+currency text changed

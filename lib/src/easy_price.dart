@@ -52,7 +52,6 @@ class _EasyPriceState extends State<EasyPrice> {
     String priceAsString = price.toString();
 
     int priceLength = priceAsString.length;
-
     if (priceLength >= 6 && priceLength < 8) {
       double priceInLacs = price / 100000;
       String formattedPrice = priceInLacs.toStringAsFixed(widget.precision);
@@ -60,9 +59,9 @@ class _EasyPriceState extends State<EasyPrice> {
     } else if (priceLength >= 8) {
       double priceInLacs = price / 100000;
       String formattedPrice = priceInLacs.toStringAsFixed(widget.precision);
-      return ' $formattedPrice ${currencyType.toLowerCase() == 'inr' ? 'Crores' : 'Million'}';
+      return ' $formattedPrice ${currencyType.toLowerCase() == 'inr' ? 'Cr' : 'Million'}';
     } else {
-      return priceAsString;
+      return '$priceAsString ${priceLength == 5 ? 'Thousand' : ''}';
     }
   }
 
